@@ -1,0 +1,32 @@
+{
+  "name": "web-ssr-ecommerce-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "watch":"node-sass --watch src/public/scss/now-ui-dashboard.scss src/public/css/now-ui-dashboard.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htphuong2001/web-ssr-ecommerce-admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/htphuong2001/web-ssr-ecommerce-admin/issues"
+  },
+  "homepage": "https://github.com/htphuong2001/web-ssr-ecommerce-admin#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13"
+  }
+}
