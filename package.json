@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon src/app.js",
-    "watch":"node-sass --watch src/public/scss/now-ui-dashboard.scss src/public/css/now-ui-dashboard.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

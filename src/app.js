@@ -20,7 +20,9 @@ app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
 app.get('/', (req, res) => {
-  res.send('Hello word');
+  res.render('pages/dashboard.ejs', {
+    titlePage: 'Dashboard',
+  });
 });
 
 app.listen(port, () => {
