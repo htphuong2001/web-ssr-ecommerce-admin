@@ -2,6 +2,7 @@
   --color-dark: #11101d;
   --color-dark-secondary: #1d1b31;
   --color-light: #e4e9f7;
+  --color-light-secondary: #687baa;
   --color-white: #fff;
 }
 
@@ -31,12 +32,12 @@ body {
 }
 
 .sidebar .logo {
-  height: 50px;
+  height: 55px;
   line-height: 50px;
   margin-top: 5px;
   text-align: center;
   width: 60%;
-  font-size: 3.6rem;
+  font-size: 4rem;
   color: var(--color-white);
   border-bottom: 2px solid var(--color-white);
 }
@@ -119,7 +120,6 @@ body {
   font-size: 2.5rem;
   color: var(--color-white);
   line-height: 50px;
-  margin-right: 5px;
 }
 
 .sidebar .logout i:hover {
@@ -130,6 +130,51 @@ body {
 .main {
   width: calc(100% - 80px);
   min-height: 100vh;
-  overflow: scroll;
   background: var(--color-light);
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+}
+
+.header .title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header .account {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header .account img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.header .account .info {
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: end;
+}
+
+.header .account .name {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.header .account .role {
+  font-size: 1.2rem;
 }
