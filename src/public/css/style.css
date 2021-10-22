@@ -1,9 +1,14 @@
 :root {
   --color-dark: #11101d;
-  --color-dark-secondary: #1d1b31;
-  --color-light: #e4e9f7;
-  --color-light-secondary: #687baa;
+  --color-dark-l: #1d1b31;
+  --color-light: #ecf0f1;
+  --color-light-d: #bdc3c7;
   --color-white: #fff;
+  --color-success: #2ecc71;
+  --color-danger: #e74c3c;
+  --color-warning: #f1c40f;
+  --color-primary: #3498db;
+  --color-secondary: #1abc9c;
 }
 
 * {
@@ -19,6 +24,74 @@ html {
 
 body {
   display: flex;
+}
+
+/* --- LOGIN --- */
+.login_wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: var(--color-dark);
+}
+
+.login {
+  margin: auto;
+  width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  background: var(--color-dark-l);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login h1 {
+  color: var(--color-light);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.login .input {
+  width: 200px;
+  background: none;
+  margin: 10px;
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  padding: 14px 10px;
+  outline: none;
+  color: var(--color-white);
+  border-radius: 24px;
+  transition: all 0.25s ease;
+}
+
+.login .input:focus {
+  width: 280px;
+  border-color: var(--color-success);
+}
+
+.login input[type='submit'] {
+  margin: 15px 0;
+  padding: 12px 36px;
+  background: none;
+  border-radius: 24px;
+  border: 2px solid var(--color-success);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login input[type='submit']:hover {
+  background: var(--color-success);
+}
+
+.login span {
+  font-size: 1.4rem;
+  color: var(--color-danger);
 }
 
 /* --- SIDEBAR --- */
@@ -116,7 +189,7 @@ body {
   height: 50px;
   width: 100%;
   text-align: center;
-  background: var(--color-dark-secondary);
+  background: var(--color-dark-l);
   font-size: 2.5rem;
   color: var(--color-white);
   line-height: 50px;
