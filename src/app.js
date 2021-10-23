@@ -1,9 +1,13 @@
 const express = require('express');
 const logger = require('morgan');
 require('dotenv').config();
+const mongoDBConfig = require('./configs/mongoDB');
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Connect DB
+mongoDBConfig.connectDB();
 
 // HTTP logger
 app.use(logger('dev'));
