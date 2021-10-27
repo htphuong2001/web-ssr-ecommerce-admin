@@ -3,9 +3,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const mongoDBConfig = require('./configs/mongoDB');
 const logger = require('morgan');
-
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const router = require('./routes/index');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -29,8 +27,7 @@ app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
 // Router
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+router.establish(app);
 
 // Page not Found
 app.use((req, res, next) => {

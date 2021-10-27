@@ -1,9 +1,9 @@
-const express = require('express');
-const router = express.Router();
+const authRouter = require('./auth');
+const userRouter = require('./user');
 
-router.get('/login', (req, res, next) => {
-  const err = new Error();
-  next(err);
-});
+const establish = (app) => {
+  app.use('/', authRouter);
+  app.use('/users', userRouter);
+};
 
-module.exports = router;
+module.exports = { establish };
